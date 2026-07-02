@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: oficial-landing-page-benicio
+    env: docker
+    plan: free
+    dockerfilePath: ./render.Dockerfile
+    envVars:
+      - key: APP_DEBUG
+        value: "false"
+      - key: UPLOAD_STORAGE
+        value: database
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        sync: false
+      - key: DB_DATABASE
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_SSL
+        value: "true"
+      - key: DB_SSL_CA_BASE64
+        sync: false

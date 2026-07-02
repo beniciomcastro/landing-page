@@ -1,0 +1,11 @@
+/*
+  Main stylesheet loader.
+  Keep this file small: each imported file has one responsibility.
+*/
+@import url("/assets/css/base.css");
+@import url("/assets/css/layout.css");
+@import url("/assets/css/components.css");
+@import url("/assets/css/admin.css");
+@import url("/assets/css/themes/cyber.css");
+@import url("/assets/css/themes/industrial.css");
+@import url("/assets/css/responsive.css");

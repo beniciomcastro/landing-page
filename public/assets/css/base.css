@@ -1,0 +1,105 @@
+/*
+  Base layer: resets, tokens and global behavior shared by every page.
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #04070b;
+  --bg-2: #111827;
+  --surface: rgba(12, 18, 28, 0.76);
+  --surface-strong: rgba(255, 255, 255, 0.12);
+  --line: rgba(0, 245, 255, 0.2);
+  --text: #f8fbff;
+  --muted: #aeb7d5;
+  --blue: #00f5ff;
+  --purple: #7c4dff;
+  --orange-accent: #ff9f1c;
+  --danger: #ff4d4d;
+  --green: #39ff88;
+  --yellow: #ffd166;
+  --radius: 24px;
+  --shadow: 0 26px 90px rgba(0, 0, 0, 0.58);
+  --glow-blue: 0 0 28px rgba(0, 245, 255, 0.22);
+  --glow-orange: 0 0 32px rgba(255, 159, 28, 0.14);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+::selection {
+  background: rgba(255, 159, 28, 0.26);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080012;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--blue), var(--orange-accent));
+  border-radius: 999px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+#bgCanvas {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+body::before {
+  z-index: -1;
+}
+
+body::after {
+  z-index: -1;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+button {
+  border: 0;
+}

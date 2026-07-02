@@ -1,0 +1,320 @@
+/*
+  Industrial theme: black, white, technical grid and sharp minimal UI.
+*/
+body.industrial-theme {
+  --bg: #030303;
+  --bg-2: #090909;
+  --surface: rgba(8, 8, 8, 0.94);
+  --surface-strong: rgba(18, 18, 18, 0.96);
+  --line: rgba(255, 255, 255, 0.14);
+  --text: #f5f5f5;
+  --muted: #8a8a8a;
+  --blue: #ffffff;
+  --purple: #45ff8f;
+  --danger: #ff4040;
+  --radius: 0px;
+  --shadow: none;
+  background: #030303;
+  color: #f5f5f5;
+}
+
+body.industrial-theme::before {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    radial-gradient(
+      circle at 74% 28%,
+      rgba(255, 255, 255, 0.08),
+      transparent 26%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(3, 3, 3, 0.94));
+  background-size:
+    48px 48px,
+    48px 48px,
+    auto,
+    auto;
+}
+
+body.industrial-theme::after {
+  display: none;
+}
+
+body.industrial-theme #bgCanvas {
+  opacity: 0.13;
+  filter: grayscale(1) contrast(1.2);
+}
+
+body.industrial-theme .navbar,
+body.industrial-theme .admin-sidebar {
+  background: rgba(3, 3, 3, 0.9);
+  border-color: rgba(255, 255, 255, 0.15);
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: blur(14px);
+}
+
+body.industrial-theme .brand img {
+  filter: grayscale(1) contrast(1.35) brightness(1.2);
+}
+
+body.industrial-theme .navbar nav a,
+body.industrial-theme .sidebar-links,
+body.industrial-theme .admin-sidebar a,
+body.industrial-theme .logout-form button.sidebar-links {
+  color: #a6a6a6;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+
+body.industrial-theme .navbar nav a:hover,
+body.industrial-theme .sidebar-links:hover,
+body.industrial-theme .admin-sidebar a:hover,
+body.industrial-theme .logout-form button.sidebar-links:hover {
+  background: #ffffff;
+  color: #030303 !important;
+  border-color: #ffffff;
+  box-shadow: none;
+}
+
+body.industrial-theme .lang-toggle,
+body.industrial-theme .theme-toggle,
+body.industrial-theme .btn,
+body.industrial-theme .hero-techs a {
+  border-radius: 0;
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(3, 3, 3, 0.92);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  box-shadow: none;
+}
+
+body.industrial-theme .btn.primary {
+  background: #ffffff;
+  color: #030303;
+}
+
+body.industrial-theme .lang-toggle:hover,
+body.industrial-theme .theme-toggle:hover,
+body.industrial-theme .btn:hover,
+body.industrial-theme .hero-techs a:hover {
+  transform: translateY(-2px);
+  background: #ffffff;
+  color: #030303;
+  border-color: #ffffff;
+  box-shadow: none;
+}
+
+body.industrial-theme .hero h1 {
+  text-transform: uppercase;
+  letter-spacing: -0.08em;
+  line-height: 0.9;
+  font-size: clamp(52px, 9vw, 88px);
+}
+
+body.industrial-theme .hero h1 span {
+  color: #f5f5f5;
+}
+
+body.industrial-theme .eyebrow {
+  color: #45ff8f;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-shadow: none;
+}
+
+body.industrial-theme .hero-text,
+body.industrial-theme .about p,
+body.industrial-theme .contact p,
+body.industrial-theme .project-detail p,
+body.industrial-theme .empty-public p,
+body.industrial-theme .empty-state p,
+body.industrial-theme .admin-card p,
+body.industrial-theme .project-body p,
+body.industrial-theme .project-body span,
+body.industrial-theme .project-body small,
+body.industrial-theme .admin-row p,
+body.industrial-theme .project-form label {
+  color: #969696;
+}
+
+body.industrial-theme .hero-card,
+body.industrial-theme .about,
+body.industrial-theme .contact,
+body.industrial-theme .project-detail,
+body.industrial-theme .empty-public,
+body.industrial-theme .empty-state,
+body.industrial-theme .project-card,
+body.industrial-theme .admin-card,
+body.industrial-theme .admin-content,
+body.industrial-theme .admin-image,
+body.industrial-theme .skill-card,
+body.industrial-theme .admin-row,
+body.industrial-theme .project-form input,
+body.industrial-theme .project-form textarea,
+body.industrial-theme .admin-card input {
+  border-radius: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.032) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.032) 1px, transparent 1px),
+    rgba(8, 8, 8, 0.94);
+  background-size: 28px 28px;
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+body.industrial-theme .hero-card {
+  padding-bottom: 34px;
+  min-height: 0;
+}
+
+body.industrial-theme .hero-card::after {
+  content: none;
+}
+
+body.industrial-theme .hero-badge {
+  border-radius: 0;
+  background: rgba(3, 3, 3, 0.84);
+  border-color: rgba(69, 255, 143, 0.45);
+  color: #45ff8f;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: none;
+}
+
+body.industrial-theme .hero-card h2,
+body.industrial-theme .section-title h2,
+body.industrial-theme .about h2,
+body.industrial-theme .contact h2,
+body.industrial-theme .project-body h3,
+body.industrial-theme .admin-main h1,
+body.industrial-theme .admin-card h1,
+body.industrial-theme .admin-content h3,
+body.industrial-theme .project-detail h1 {
+  text-transform: uppercase;
+  letter-spacing: -0.07em;
+}
+
+body.industrial-theme .hero-card h2 {
+  font-size: 44px;
+}
+
+body.industrial-theme .orb {
+  opacity: 0.06;
+  filter: blur(85px) grayscale(1);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.9),
+    transparent 72%
+  );
+}
+
+body.industrial-theme .project-card:hover,
+body.industrial-theme .hero-card:hover,
+body.industrial-theme .skill-card:hover,
+body.industrial-theme .admin-image:hover,
+body.industrial-theme .admin-row:hover,
+body.industrial-theme .admin-content:hover,
+body.industrial-theme .admin-card:hover {
+  border-color: #ffffff;
+  transform: translateY(-4px);
+  box-shadow: none;
+}
+
+body.industrial-theme .project-cover {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    #101010;
+  background-size: 28px 28px;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+body.industrial-theme .project-body a,
+body.industrial-theme .row-actions a,
+body.industrial-theme .skill-modal-content a,
+body.industrial-theme .admin-content li::before,
+body.industrial-theme .skill-card i {
+  color: #45ff8f;
+  text-shadow: none;
+}
+
+body.industrial-theme .skill-modal,
+body.industrial-theme .lightbox {
+  background: rgba(0, 0, 0, 0.86);
+  backdrop-filter: none;
+}
+
+body.industrial-theme .skill-modal-content,
+body.industrial-theme .lightbox img {
+  border-radius: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    #080808;
+  background-size: 28px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: none;
+}
+
+body.industrial-theme .skill-modal-close,
+body.industrial-theme .lightbox-close,
+body.industrial-theme .scroll-top-btn {
+  border-radius: 0;
+  background: #080808;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+body.industrial-theme .skill-modal-close:hover,
+body.industrial-theme .lightbox-close:hover,
+body.industrial-theme .scroll-top-btn:hover {
+  background: #ffffff;
+  color: #030303;
+}
+
+body.industrial-theme .admin-page,
+body.industrial-theme.admin-page {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    #030303;
+  background-size: 48px 48px;
+}
+
+body.industrial-theme .project-form input:focus,
+body.industrial-theme .project-form textarea:focus,
+body.industrial-theme .admin-card input:focus {
+  border-color: #45ff8f;
+  box-shadow: none;
+}
+
+body.industrial-theme .error,
+body.industrial-theme .row-actions button {
+  color: #ff4040;
+}
+
+body.industrial-theme .admin-note {
+  background: rgba(69, 255, 143, 0.07);
+  border-color: rgba(69, 255, 143, 0.24);
+  border-radius: 0;
+}
+
+body.industrial-theme .site-footer {
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 10px;
+}
+
+body.industrial-theme ::selection {
+  background: #45ff8f;
+  color: #030303;
+}
