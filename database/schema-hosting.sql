@@ -26,5 +26,5 @@ CREATE TABLE IF NOT EXISTS projects (
 );
 
 INSERT INTO users (name, email, password) VALUES
-('Benício Castro', 'beniciomcastro@gmail.com', '755f8e38cb6a9d299658c321f8a53882c1962e59995f1ccd9e7178cf0cd59caa')
+('Benício Castro', 'beniciomcastro@gmail.com', '$2y$10$nhRysNtfSED/d/UYH.3YWeBMYlC3rjv7KIGekR0YFpRCdEH7Cva32')
 ON DUPLICATE KEY UPDATE email = VALUES(email);
