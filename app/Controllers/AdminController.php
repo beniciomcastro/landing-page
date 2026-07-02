@@ -11,7 +11,7 @@ use App\Models\User;
 class AdminController
 {
     private const MAX_LOGIN_ATTEMPTS = 5;
-    private const LOGIN_BLOCK_SECONDS = 10;
+    private const LOGIN_BLOCK_SECONDS = 600;
 
     private function noCache(): void
     {
