@@ -12,4 +12,4 @@ COPY . .
 ENV APP_DEBUG=false
 ENV UPLOAD_STORAGE=database
 
-CMD php -S 0.0.0.0:${PORT:-10000} -t public public/router.php
+CMD ["sh", "-c", "php -S 0.0.0.0:${PORT:-10000} -t public public/router.php"]
