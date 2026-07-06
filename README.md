@@ -82,41 +82,6 @@ DB_SSL=true
 DB_SSL_CA_BASE64=
 ```
 
-## Render + Aiven deployment
-
-This project includes:
-
-```text
-render.yaml
-render.Dockerfile
-```
-
-In Render, create a web service from this project and configure the environment variables from `.env.example`.
-
-For Aiven MySQL, create a database and import:
-
-```text
-database/schema-hosting.sql
-```
-
-`schema-hosting.sql` does not include `CREATE DATABASE` or `USE`, so it is safe for managed database providers.
-
-## Upload storage
-
-Render uses ephemeral storage. For production, keep:
-
-```env
-UPLOAD_STORAGE=database
-```
-
-With this option, project images are stored in MySQL as data URIs and remain available after redeploys.
-
-For local development, you may use:
-
-```env
-UPLOAD_STORAGE=filesystem
-```
-
 ## Theme and language storage
 
 The public website and admin panel use separated browser storage keys:
